@@ -10,10 +10,8 @@ echo "..."
 echo "configuring youtube-dl"
 mkdir /data/data/com.termux/files/home/storage/shared/Youtube-downloads 
 mkdir -p ~/.config/youtube-dl 
-touch ~/.config/youtube-dl/config 
 echo '--no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=1080]"' >> ~/.config/youtube-dl/config
-mkdir ~/bin 
-touch ~/bin/termux-url-opener  
+mkdir ~/bin  
 echo 'youtube-dl $1' >> ~/bin/termux-url-opener 
 cd ~
 #echo "..."
