@@ -18,7 +18,7 @@ cd ~
 echo "..."
 echo "youtube-dl configured"
 echo "Descargando prueba"
-youtube-dl https://www.youtube.com/watch?v=dQw4w9WgXc
+youtube-dl https://www.youtube.com/watch?v=dQw4w9WgXcQ
 echo "..."
 echo "Ahora sí debería estar todo correcto"
 echo "..."
