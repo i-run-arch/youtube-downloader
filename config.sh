@@ -1,5 +1,5 @@
 termux-setup-storage &> /dev/null
-apt update && apt upgrade -y &> /dev/null
+apt update && apt upgrade -y 
 pkg install python -y &> /dev/null
 echo "installing youtube-dl"
 pip install youtube-dl &> /dev/null 
