@@ -42,6 +42,4 @@ youtube-dl https://www.youtube.com/watch?v=dQw4w9WgXcQ
 echo "..."
 echo "Everything should be working now"
 exho "Have fun!"
-sleep 2s
-sl
 sleep 1s
