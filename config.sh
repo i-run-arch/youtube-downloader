@@ -7,7 +7,7 @@ apt update && apt upgrade -y
 
 echo "..."
 echo "installing python "
-pkg install python sl -y 
+pkg install python -y 
 #Installs python
 
 echo "..."
@@ -35,14 +35,13 @@ echo 'youtube-dl $1' >> ~/bin/termux-url-opener
 cd ~
 echo "..."
 echo "youtube-dl configured"
-echo "Descargando prueba"
+echo "Downloading test video"
 youtube-dl https://www.youtube.com/watch?v=dQw4w9WgXcQ
 #Downloads Rick Atley's Never gonna Give you Up
 
 echo "..."
-echo "Ahora sí debería estar todo correcto"
-echo "..."
-echo "Buen viajeeee!!"
+echo "Everything should be working now"
+exho "Have fun!"
 sleep 2s
 sl
 sleep 1s
