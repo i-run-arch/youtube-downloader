@@ -17,10 +17,12 @@ echo 'youtube-dl $1' >> ~/bin/termux-url-opener
 cd ~
 echo "..."
 echo "youtube-dl configured"
+echo "Descargando prueba"
+youtube-dl https://www.youtube.com/watch?v=dQw4w9WgXc
 echo "..."
 echo "Ahora sí debería estar todo correcto"
 echo "..."
 echo "Buen viajeeee!!"
-sleep 5s
-sl
 sleep 2s
+sl
+sleep 1s
