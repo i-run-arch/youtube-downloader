@@ -1,5 +1,7 @@
 # youtube-downloader
 
+This is a script that installs and configure youtube-dl to download youtube videos using termux in an android device.
+
 
 You can simply install this downloader by copying an pasting in termux the next line only after clean termux install (you can install it after installing other programs or repositories but I don garantize it to work beacuse it can interfer with them):
 
