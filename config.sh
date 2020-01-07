@@ -14,13 +14,13 @@ echo '--no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube-down
 mkdir ~/bin  
 echo 'youtube-dl $1' >> ~/bin/termux-url-opener 
 cd ~
-#echo "..."
-#echo "youtube-dl configured"
-#echo "..."
-#echo "Ahora sí debería estar todo correcto"
-#echo "..."
-#echo "Buen viajeeee!!"
-#sleep 5s
-#sl
-#sleep 2s
-#&> /dev/null
+echo "..."
+echo "youtube-dl configured"
+echo "..."
+echo "Ahora sí debería estar todo correcto"
+echo "..."
+echo "Buen viajeeee!!"
+sleep 5s
+sl
+sleep 2s
+
