@@ -1,5 +1,5 @@
 termux-setup-storage &> /dev/null
-apt update && apt upgrade -y -y
+apt update && apt upgrade -y
 echo "..."
 echo "installing python "
 pkg install python sl -y &> /dev/null
