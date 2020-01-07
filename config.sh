@@ -11,7 +11,7 @@ echo "configuring youtube-dl"
 mkdir ~/storage/shared/Youtube-downloads &> /dev/null
 mkdir -p ~/.config/youtube-dl &> /dev/null
 touch ~/.config/youtube-dl/config &> /dev/null
-echo ' --no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s-f"best[height>=1080]".avi' >> ~/.config/youtube-dl/config &> /dev/null
+echo '--no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s-f"best[height<=1080]".avi' >> ~/.config/youtube-dl/config &> /dev/null
 mkdir ~/bin &> /dev/null
 touch ~/bin/termux-url-opener &> /dev/null 
 echo 'youtube-dl $1' >> ~/bin/termux-url-opener &> /dev/null
@@ -19,7 +19,10 @@ cd ~ &> /dev/null
 echo "..."
 echo "youtube-dl configured"
 echo "..."
-echo "Ahora si debería estar todo correcto"
+echo "Ahora sí debería estar todo correcto"
 echo "..."
 echo "Buen viajeeee!!"
+sleep 5s
 sl
+sleep 2s
+exit
