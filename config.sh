@@ -1,4 +1,5 @@
-wait termux-setup-storage 
+termux-setup-storage 
+sleep 5s
 apt update && apt upgrade -y
 echo "..."
 echo "installing python "
@@ -23,4 +24,3 @@ echo "Buen viajeeee!!"
 sleep 5s
 sl
 sleep 2s
-
