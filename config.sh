@@ -1,4 +1,4 @@
-termux-setup-storage 
+wait termux-setup-storage 
 apt update && apt upgrade -y
 echo "..."
 echo "installing python "
