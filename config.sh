@@ -1,29 +1,28 @@
-termux-setup-storage &> /dev/null
+termux-setup-storage 
 apt update && apt upgrade -y
 echo "..."
 echo "installing python "
-pkg install python sl -y &> /dev/null
+pkg install python sl -y 
 echo "..."
 echo "installing youtube-dl"
-pip install youtube-dl &> /dev/null 
+pip install youtube-dl  
 echo "..."
 echo "configuring youtube-dl"
-mkdir /data/data/com.termux/files/home/storage/shared/Youtube-downloads &> /dev/null
-mkdir -p ~/.config/youtube-dl &> /dev/null
-touch ~/.config/youtube-dl/config &> /dev/null
-echo '--no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=1080]"' >> ~/.config/youtube-dl/config &> /dev/null
-mkdir ~/bin &> /dev/null
-touch ~/bin/termux-url-opener &> /dev/null 
-echo 'youtube-dl $1' >> ~/bin/termux-url-opener &> /dev/null
-cd ~ &> /dev/null 
-echo "..."
-echo "youtube-dl configured"
-echo "..."
-echo "Ahora sí debería estar todo correcto"
-echo "..."
-echo "Buen viajeeee!!"
-sleep 5s
-sl
-sleep 2s
-exit
-exit
+mkdir /data/data/com.termux/files/home/storage/shared/Youtube-downloads 
+mkdir -p ~/.config/youtube-dl 
+touch ~/.config/youtube-dl/config 
+echo '--no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=1080]"' >> ~/.config/youtube-dl/config
+mkdir ~/bin 
+touch ~/bin/termux-url-opener  
+echo 'youtube-dl $1' >> ~/bin/termux-url-opener 
+cd ~
+#echo "..."
+#echo "youtube-dl configured"
+#echo "..."
+#echo "Ahora sí debería estar todo correcto"
+#echo "..."
+#echo "Buen viajeeee!!"
+#sleep 5s
+#sl
+#sleep 2s
+#&> /dev/null
