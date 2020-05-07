@@ -27,5 +27,14 @@ We need to update and upgrade the base system. Then we need to install a few pac
   pip install youtube-dl
 #+end_src
 
+Setup the folders that are required for easy usage of youtube-dl
+#+begin_src sh  -n +0 :tangle yes :tangle ./config.bash
+  if [[ ! -d /data/data/com.termux/files/home/storage/shared/Youtube ]]; then
+      mkdir -p /data/data/com.termux/files/home/storage/shared/Youtube
+  fi
+  if [[ ! -d ~/.config/youtube-dl ]]; then
+      mkdir -p ~/.config/youtube-dl
+  fi
+#+end_src
 
 
