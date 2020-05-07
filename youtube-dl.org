@@ -1,0 +1,16 @@
+#+TITLE: Youtube-dl installer for termux
+#+DATE: 2020-05-07
+#+AUTHOR: i-use-arch
+:properties:
+:header-args: :tangle yes :tangle ./config.sh 
+:end:
+
+* Update the base and install dependancies. 
+
+** The header
+This is a bash script so we start with a bang with the absolute path to the bash executable.
+
+#+begin_src sh -n 1 :tangle yes :tangle ./config.bash
+  #!/data/data/com.termux/files/usr/bin/bash
+#+end_src
+
