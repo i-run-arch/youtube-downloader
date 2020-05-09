@@ -84,14 +84,26 @@ elif [[ $URL == *"youtu.be"* || $URL == *"youtube.com"* ]]; then
           echo "something went wrong and downloading video. Press ctrl+c to cancel."
           youtube-dl $URL
       fi
-  else
+  }
+  echo "Cracking open the internets"
+
+
+  case $URL in
+      ,*youtu.be*)
+          dl_youtube()
+      ;;
+      ,*youtube.com*)
+          dl_youtube()
+      ;;
+      ,*)
       echo "something is wrong. Just grabbing the url with curl"
       cd ~/storage/shared/Downloads
       curl -O $URL
-  fi
+      ;;
 
-  read -n 1 -s -p "Press any key to exit... good luck finding it."
-  EOF
+
+ read -n 1 -s -p "Press any key to exit... good luck finding it."
+ EOF
 
 #+end_src
 
