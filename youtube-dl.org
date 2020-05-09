@@ -69,13 +69,8 @@ elif [[ $URL == *"youtu.be"* || $URL == *"youtube.com"* ]]; then
       yesvideo=1
   fi
 
-  echo "Cracking open the internets"
-  # sort by source of URL and run proper command.
-  if [[ $URL == *"open.spotify.com"* ]] ; then
-      cd ~/storage/shared/Music
-      echo "spotify link discovered, running spotify-dl"
-      spotdl --song $URL
-  elif [[ $URL == *"youtu.be"* || $URL == *"youtube.com"* ]]; then
+  # functions 
+  dl_youtube() {
       cd ~/storage/shared/Youtube
       #for options to download video, uncomment the below line
       #read -p $'Download video or only audio \n(Select the number and press return) \n 1) Video \n 2) Audio only \n' yesvideo
