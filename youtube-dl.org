@@ -3,7 +3,7 @@
 #+AUTHOR: i-use-BSD
 
 * README 
-#+begin_src sh -n 1 :tangle yes ./README.md
+#+begin_src sh -n 1 :tangle yes :tangle ./README.md
   # youtube-downloader
 
   This is a script that installs and configure youtube-dl to download youtube videos using termux in an android device.
