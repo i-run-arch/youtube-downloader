@@ -49,7 +49,7 @@ Configure the default behavior of youtube-dl to download 1080p video when no oth
 cat >~/bin/termux-url-opener <<EOF
 #+end_src
 
-This should be 
+This is the old spotdl code. Should turn this into a funtion as well. 
 #+begin_src sh
 if [[ $URL == *"open.spotify.com"* ]] ; then
     cd ~/storage/shared/Music
