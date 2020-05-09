@@ -107,8 +107,10 @@ elif [[ $URL == *"youtu.be"* || $URL == *"youtube.com"* ]]; then
 
 #+end_src
 
+#+begin_src sh   -n +0 :tangle yes :tangle ./config.bash
 echo "Downloading test video. May 3, 2020AM service."
 youtube-dl https://youtu.be/52k3IzIFnGQ
 
 echo "there is no process for detecting errors here. What you see is what you get."
 read -n 1 -s -p "Press any key to exit..."
+#+end_src
