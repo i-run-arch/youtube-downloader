@@ -6,7 +6,7 @@ This is a script that installs and configure youtube-dl to download youtube vide
 You can simply install this downloader by copy an pasting in termux the next line only after clean termux install (you can install it after installing other programs or repositories but I don garantize it to work beacuse it can interfer with them):
 
 ```
-pkg install git -y; git clone https://github.com/i-run-arch/youtube-downloader.git; cd youtube-downloader; chmod +x config.sh; ./config.sh && exit
+pkg install git -y; git clone https://github.com/i-run-arch/youtube-downloader.git; cd youtube-downloader; chmod +x config.bash; ./config.bash && exit
 ```
 
 Accept the permissions and press enter if asks anything.
