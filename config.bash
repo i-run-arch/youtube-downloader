@@ -26,7 +26,7 @@ EOF
 
 cat >~/bin/termux-url-opener <<EOF
 
-#!/data/data/com.termux.files/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 URL=\$1
 
 #force audio unless specified in read line below.
