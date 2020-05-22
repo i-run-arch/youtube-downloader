@@ -42,7 +42,7 @@ We need to update and upgrade the base system. Then we need to install a few pac
 #+begin_src sh -n +0 :tangle yes :tangle ./config.bash
   pkg update && pkg upgrade -y
 
-  pkg install wget curl python ffmpeg
+  pkg install wget curl python ffmpeg -y
 
   pip install youtube-dl
 #+end_src
