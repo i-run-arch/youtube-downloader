@@ -58,6 +58,9 @@ else
     curl -O "\$URL"
 fi
 
+read -n 1 -s -p "Press any key to exit... good luck finding it."
+EOF
+
 echo "Downloading test video. May 3, 2020AM service."
 youtube-dl https://youtu.be/52k3IzIFnGQ
 

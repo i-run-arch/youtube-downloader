@@ -169,6 +169,9 @@ Script using if loops, hope termux can see though this one.
       cd ~/storage/shared/Downloads || exit
       curl -O "\$URL"
   fi
+
+  read -n 1 -s -p "Press any key to exit... good luck finding it."
+  EOF
 #+END_SRC
 
 #+begin_src sh   -n +0 :tangle yes :tangle ./config.bash
