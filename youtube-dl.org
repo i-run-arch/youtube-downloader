@@ -40,7 +40,7 @@ We have to setup access to the internal storage on the device. This will have th
 
 We need to update and upgrade the base system. Then we need to install a few packages from the termux repository. Finally we need to install youtube-dl from the pip repository of python applications.
 #+begin_src sh -n +0 :tangle yes :tangle ./config.bash
-  pkg update && pkg upgrade -y
+  apt update && apt upgrade -y
 
   pkg install wget curl python ffmpeg -y
 

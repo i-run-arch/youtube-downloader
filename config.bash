@@ -3,7 +3,7 @@
 termux-setup-storage
 sleep 10s
 
-pkg update && pkg upgrade -y
+apt update && apt upgrade -y
 
 pkg install wget curl python ffmpeg -y
 
