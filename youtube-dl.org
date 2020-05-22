@@ -129,8 +129,6 @@ Having way to much trouble with the functions and cases.
           curl -O "\$URL"
           ;;
   esac
-
-
   read -n 1 -s -p "Press any key to exit... good luck finding it."
   EOF
 
@@ -167,7 +165,8 @@ Script using if loops, hope termux can see though this one.
   else
       echo "something is wrong. Just grabbing the url with curl"
       cd ~/storage/shared/Downloads || exit
-      curl -O "\$URL"
+      #curl -O "\$URL"
+      youtube-dl "\$URL"
   fi
 
   read -n 1 -s -p "Press any key to exit... good luck finding it."

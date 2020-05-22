@@ -55,7 +55,8 @@ if  [[ $URL == *"youtu.be"* || $URL == *"youtube.com"* ]]; then
 else
     echo "something is wrong. Just grabbing the url with curl"
     cd ~/storage/shared/Downloads || exit
-    curl -O "\$URL"
+    #curl -O "\$URL"
+    youtube-dl "\$URL"
 fi
 
 read -n 1 -s -p "Press any key to exit... good luck finding it."
