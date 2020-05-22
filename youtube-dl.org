@@ -2,7 +2,7 @@
 #+DATE: 2020-05-07
 #+AUTHOR: i-use-BSD
 
-* README 
+* README
 #+begin_src sh -n 1 :tangle yes :tangle ./README.md
   # youtube-downloader
 
@@ -22,17 +22,17 @@
   After installing you can go to any youtube video in the youtube app and share it to termux, after finishing downloading the video will be in your internal storage inside the folder "Youtube-downloads"
 
 #+end_src
-* Update the base and install dependancies. 
+* Update the base and install dependancies.
 
 ** The header
 This is a bash script so we start with a bang with the absolute path to the bash executable.
 
-#+begin_src sh -n 1 :tangle yes :tangle ./config.bash 
+#+begin_src sh -n 1 :tangle yes :tangle ./config.bash
   #!/data/data/com.termux/files/usr/bin/bash
 #+end_src
 
 ** setup the termux enviroment
-We have to setup access to the internal storage on the device. This will have the termux application request permission to access storage on the device. A popup should appear with 
+We have to setup access to the internal storage on the device. This will have the termux application request permission to access storage on the device. A popup should appear with
 #+begin_src sh -n +0 :tangle yes :tangle ./config.bash
   termux-setup-storage
   sleep 10s
@@ -40,7 +40,7 @@ We have to setup access to the internal storage on the device. This will have th
 
 We need to update and upgrade the base system. Then we need to install a few packages from the termux repository. Finally we need to install youtube-dl from the pip repository of python applications.
 #+begin_src sh -n +0 :tangle yes :tangle ./config.bash
-  pkg update && pkg upgrade -y 
+  pkg update && pkg upgrade -y
 
   pkg install wget curl python ffmpeg
 
@@ -60,6 +60,7 @@ Setup the folders that are required for easy usage of youtube-dl
 Configure the default behavior of youtube-dl to download 1080p video when no other arguments are given.
 
 #+begin_src sh  -n +0 :tangle yes :tangle ./config.bash
+  #This configures the default actions of youtube-dl
   cat >~/.config/youtube-dl <<EOF
     -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=1080]"
   EOF
