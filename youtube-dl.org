@@ -65,7 +65,7 @@ Configure the default behavior of youtube-dl to download 1080p video when no oth
 #+begin_src sh  -n +0 :tangle yes :tangle ./config.bash
   #This configures the default actions of youtube-dl
   cat >~/.config/youtube-dl/config <<EOF
-    -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=1080]"
+    -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=480]"
   EOF
 #+end_src
 
@@ -81,6 +81,8 @@ This is the old spotdl code. Should turn this into a funtion as well.
       spotdl --song \$URL
   elif [[ \$URL == *"youtu.be"* || \$URL == *"youtube.com"* ]]; then
 #+end_src
+
+
 
 #+begin_src sh  -n +0 :tangle yes :tangle ./config.bash
   #!/data/data/com.termux.files/usr/bin/bash

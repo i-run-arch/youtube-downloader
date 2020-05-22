@@ -21,7 +21,7 @@ fi
 
 #This configures the default actions of youtube-dl
 cat >~/.config/youtube-dl/config <<EOF
-  -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=1080]"
+  -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=480]"
 EOF
 
 cat >~/bin/termux-url-opener <<EOF
