@@ -55,6 +55,9 @@ Setup the folders that are required for easy usage of youtube-dl
   if [[ ! -d ~/.config/youtube-dl ]]; then
       mkdir -p ~/.config/youtube-dl
   fi
+  if [[ ! -d /data/data/com.termux/files/home/bin ]]; then
+      mkdir -p ~/bin
+  fi
 #+end_src
 
 Configure the default behavior of youtube-dl to download 1080p video when no other arguments are given.
