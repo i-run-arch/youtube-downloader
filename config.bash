@@ -3,9 +3,9 @@
 termux-setup-storage
 sleep 10s
 
-pkg update && pkg upgrade -y 
+pkg update && pkg upgrade -y
 
-pkg install wget curl python ffmpeg
+pkg install wget curl python ffmpeg -y
 
 pip install youtube-dl
 
@@ -15,43 +15,47 @@ fi
 if [[ ! -d ~/.config/youtube-dl ]]; then
     mkdir -p ~/.config/youtube-dl
 fi
+if [[ ! -d /data/data/com.termux/files/home/bin ]]; then
+    mkdir -p ~/bin
+fi
 
-cat >~/.config/youtube-dl <<EOF
+#This configures the default actions of youtube-dl
+cat >~/.config/youtube-dl/config <<EOF
   -o /data/data/com.termux/files/home/storage/shared/Youtube-downloads/%(title)s.%(ext)s -f "best[height<=1080]"
 EOF
 
 cat >~/bin/termux-url-opener <<EOF
 
 #!/data/data/com.termux.files/usr/bin/bash
- URL=$1
+ URL=\$1
 
  #force audio unless specified in read line below.
- if [[ -z $2 ]]; then
-     yesvideo=2
+if [[ -z \$2 ]]; then
+    yesvideo=2
  else
      yesvideo=1
  fi
 
- # functions 
+ # functions
  dl_youtube() {
      cd ~/storage/shared/Youtube
      #for options to download video, uncomment the below line
-     #read -p $'Download video or only audio \n(Select the number and press return) \n 1) Video \n 2) Audio only \n' yesvideo
-     if [[ $yesvideo ==1 ]]; then
-         youtube-dl $URL
-     elif [[ $yesvideo == 2 ]]; then
+     #read -p \$'Download video or only audio \n(Select the number and press return) \n 1) Video \n 2) Audio only \n' yesvideo
+     if [[ \$yesvideo ==1 ]]; then
+         youtube-dl \$URL
+     elif [[ \$yesvideo == 2 ]]; then
          echo "attempting to download the Best audio"
          # change webm to m4a to not download opus
-         youtube-dl -f 'bestaudio[ext=m4a]' $URL
+         youtube-dl -f 'bestaudio[ext=m4a]' \$URL
      else
          echo "something went wrong and downloading video. Press ctrl+c to cancel."
-         youtube-dl $URL
+         youtube-dl \$URL
      fi
  }
  echo "Cracking open the internets"
 
 
- case $URL in
+ case \$URL in
      *youtu.be*)
          dl_youtube()
      ;;
@@ -61,7 +65,7 @@ cat >~/bin/termux-url-opener <<EOF
      *)
      echo "something is wrong. Just grabbing the url with curl"
      cd ~/storage/shared/Downloads
-     curl -O $URL
+     curl -O \$URL
      ;;
 
 
