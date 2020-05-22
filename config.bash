@@ -24,6 +24,7 @@ cat >~/.config/youtube-dl/config <<EOF
   -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f "best[height<=480]"
 EOF
 
+cat >~/bin/termux-url-opener <<EOF
 #!/data/data/com.termux/files/usr/bin/bash
 URL="\$1"
 
@@ -34,7 +35,9 @@ else
     yesvideo=1
 fi
 
-if  [[ "\$URL" == *"youtu.be"* || "\$URL" == *"youtube.com"* ]]; then
+# functions
+dl_youtube ()
+{
     cd ~/storage/shared/Youtube || exit
     #for options to download video, uncomment the below line
     #read -p \$'Download video or only audio \n(Select the number and press return) \n 1) Video \n 2) Audio only \n' yesvideo
@@ -48,14 +51,24 @@ if  [[ "\$URL" == *"youtu.be"* || "\$URL" == *"youtube.com"* ]]; then
         echo "something went wrong and downloading video. Press ctrl+c to cancel."
         youtube-dl "\$URL"
     fi
+}
 
-else
-    echo "something is wrong. Just grabbing the url with curl"
-    cd ~/storage/shared/Download || exit
-    #curl -O "\$URL"
-    youtube-dl "\$URL"
-fi
+echo "Cracking open the internets"
 
+
+case "\$URL" in
+    *youtu.be*)
+        dl_youtube
+        ;;
+    *youtube.com*)
+        dl_youtube
+        ;;
+    *)
+        echo "something is wrong. Just grabbing the url with curl"
+        cd ~/storage/shared/Download || exit
+        curl -O "\$URL"
+        ;;
+esac
 read -n 1 -s -p "Press any key to exit... good luck finding it."
 EOF
 

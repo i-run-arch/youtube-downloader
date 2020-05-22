@@ -84,7 +84,7 @@ This is the old spotdl code. Should turn this into a funtion as well.
 
 Having way to much trouble with the functions and cases.
 
-#+begin_src sh
+#+begin_src sh  -n +0 :tangle yes :tangle ./config.bash
   cat >~/bin/termux-url-opener <<EOF
   #!/data/data/com.termux/files/usr/bin/bash
   URL="\$1"
@@ -136,7 +136,7 @@ Having way to much trouble with the functions and cases.
 #+end_src
 
 Script using if loops, hope termux can see though this one.
-#+BEGIN_SRC sh   -n +0 :tangle yes :tangle ./config.bash
+#+BEGIN_SRC sh
   #!/data/data/com.termux/files/usr/bin/bash
   URL="\$1"
 
