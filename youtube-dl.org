@@ -82,9 +82,9 @@ This is the old spotdl code. Should turn this into a funtion as well.
   elif [[ \$URL == *"youtu.be"* || \$URL == *"youtube.com"* ]]; then
 #+end_src
 
+Having way to much trouble with the functions and cases.
 
-
-#+begin_src sh  -n +0 :tangle yes :tangle ./config.bash
+#+begin_src sh
   #!/data/data/com.termux/files/usr/bin/bash
   URL="\$1"
 
