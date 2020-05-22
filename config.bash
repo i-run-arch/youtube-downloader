@@ -26,6 +26,38 @@ EOF
 
 cat >~/bin/termux-url-opener <<EOF
 
+#!/data/data/com.termux/files/usr/bin/bash
+URL="\$1"
+
+#force audio unless specified in read line below.
+if [[ -z "\$2" ]]; then
+    yesvideo=2
+else
+    yesvideo=1
+fi
+
+if  [[ $URL == *"youtu.be"* || $URL == *"youtube.com"* ]]; then
+
+    cd ~/storage/shared/Youtube || exit
+    #for options to download video, uncomment the below line
+    #read -p \$'Download video or only audio \n(Select the number and press return) \n 1) Video \n 2) Audio only \n' yesvideo
+    if [[ "\$yesvideo" == 1 ]]; then
+        youtube-dl "\$URL"
+    elif [[ "\$yesvideo" == 2 ]]; then
+        echo "attempting to download the Best audio"
+        # change webm to m4a to not download opus
+        youtube-dl -f 'bestaudio[ext=m4a]' "\$URL"
+    else
+        echo "something went wrong and downloading video. Press ctrl+c to cancel."
+        youtube-dl "\$URL"
+    fi
+
+else
+    echo "something is wrong. Just grabbing the url with curl"
+    cd ~/storage/shared/Downloads || exit
+    curl -O "\$URL"
+fi
+
 echo "Downloading test video. May 3, 2020AM service."
 youtube-dl https://youtu.be/52k3IzIFnGQ
 
