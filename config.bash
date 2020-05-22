@@ -65,7 +65,7 @@ case \$URL in
         ;;
     *)
         echo "something is wrong. Just grabbing the url with curl"
-        cd ~/storage/shared/Downloads
+        cd ~/storage/shared/Downloads || exit
         curl -O \$URL
         ;;
 esac
