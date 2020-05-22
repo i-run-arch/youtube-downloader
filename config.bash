@@ -27,10 +27,10 @@ EOF
 cat >~/bin/termux-url-opener <<EOF
 
 #!/data/data/com.termux/files/usr/bin/bash
-URL=\$1
+URL="\$1"
 
 #force audio unless specified in read line below.
-if [[ -z \$2 ]]; then
+if [[ -z "\$2" ]]; then
     yesvideo=2
 else
     yesvideo=1
