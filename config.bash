@@ -42,22 +42,22 @@ dl_youtube ()
     cd ~/storage/shared/Youtube || exit
     #for options to download video, uncomment the below line
     #read -p \$'Download video or only audio \n(Select the number and press return) \n 1) Video \n 2) Audio only \n' yesvideo
-    if [[ \$yesvideo == 1 ]]; then
-        youtube-dl \$URL
-    elif [[ \$yesvideo == 2 ]]; then
+    if [[ "\$yesvideo" == 1 ]]; then
+        youtube-dl "\$URL"
+    elif [[ "\$yesvideo" == 2 ]]; then
         echo "attempting to download the Best audio"
         # change webm to m4a to not download opus
-        youtube-dl -f 'bestaudio[ext=m4a]' \$URL
+        youtube-dl -f 'bestaudio[ext=m4a]' "\$URL"
     else
         echo "something went wrong and downloading video. Press ctrl+c to cancel."
-        youtube-dl \$URL
+        youtube-dl "\$URL"
     fi
 }
 
 echo "Cracking open the internets"
 
 
-case \$URL in
+case "\$URL" in
     *youtu.be*)
         dl_youtube
         ;;
@@ -67,7 +67,7 @@ case \$URL in
     *)
         echo "something is wrong. Just grabbing the url with curl"
         cd ~/storage/shared/Downloads || exit
-        curl -O \$URL
+        curl -O "\$URL"
         ;;
 esac
 
