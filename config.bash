@@ -37,7 +37,6 @@ else
 fi
 
 if  [[ "\$URL" == *"youtu.be"* || "\$URL" == *"youtube.com"* ]]; then
-
     cd ~/storage/shared/Youtube || exit
     #for options to download video, uncomment the below line
     #read -p \$'Download video or only audio \n(Select the number and press return) \n 1) Video \n 2) Audio only \n' yesvideo
