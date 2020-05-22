@@ -86,10 +86,10 @@ This is the old spotdl code. Should turn this into a funtion as well.
 
 #+begin_src sh  -n +0 :tangle yes :tangle ./config.bash
   #!/data/data/com.termux/files/usr/bin/bash
-  URL=\$1
+  URL="\$1"
 
   #force audio unless specified in read line below.
-  if [[ -z \$2 ]]; then
+  if [[ -z "\$2" ]]; then
       yesvideo=2
   else
       yesvideo=1
