@@ -67,10 +67,11 @@ if [[ -z \$2 ]]; then
      cd ~/storage/shared/Downloads
      curl -O \$URL
      ;;
+ esac
 
 
-read -n 1 -s -p "Press any key to exit... good luck finding it."
-EOF
+ read -n 1 -s -p "Press any key to exit... good luck finding it."
+ EOF
 
 echo "Downloading test video. May 3, 2020AM service."
 youtube-dl https://youtu.be/52k3IzIFnGQ

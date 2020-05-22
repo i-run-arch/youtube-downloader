@@ -124,10 +124,11 @@ This is the old spotdl code. Should turn this into a funtion as well.
        cd ~/storage/shared/Downloads
        curl -O \$URL
        ;;
+   esac
 
 
-  read -n 1 -s -p "Press any key to exit... good luck finding it."
-  EOF
+   read -n 1 -s -p "Press any key to exit... good luck finding it."
+   EOF
 
 #+end_src
 
