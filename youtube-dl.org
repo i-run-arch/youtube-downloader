@@ -146,7 +146,7 @@ Script using if loops, hope termux can see though this one.
       yesvideo=1
   fi
 
-  if  [[ $URL == *"youtu.be"* || $URL == *"youtube.com"* ]]; then
+  if  [[ "\$URL" == *"youtu.be"* || "\$URL" == *"youtube.com"* ]]; then
 
       cd ~/storage/shared/Youtube || exit
       #for options to download video, uncomment the below line
@@ -172,6 +172,8 @@ Script using if loops, hope termux can see though this one.
   read -n 1 -s -p "Press any key to exit... good luck finding it."
   EOF
 #+END_SRC
+
+#+RESULTS:
 
 #+begin_src sh   -n +0 :tangle yes :tangle ./config.bash
 echo "Downloading test video. May 3, 2020AM service."

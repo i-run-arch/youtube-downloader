@@ -36,7 +36,7 @@ else
     yesvideo=1
 fi
 
-if  [[ $URL == *"youtu.be"* || $URL == *"youtube.com"* ]]; then
+if  [[ "\$URL" == *"youtu.be"* || "\$URL" == *"youtube.com"* ]]; then
 
     cd ~/storage/shared/Youtube || exit
     #for options to download video, uncomment the below line
