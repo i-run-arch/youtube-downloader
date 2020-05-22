@@ -39,7 +39,7 @@ fi
 # functions
 dl_youtube ()
 {
-    cd ~/storage/shared/Youtube
+    cd ~/storage/shared/Youtube || exit
     #for options to download video, uncomment the below line
     #read -p \$'Download video or only audio \n(Select the number and press return) \n 1) Video \n 2) Audio only \n' yesvideo
     if [[ \$yesvideo == 1 ]]; then
