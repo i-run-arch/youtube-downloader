@@ -24,8 +24,6 @@ cat >~/.config/youtube-dl/config <<EOF
   -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f "best[height<=480]"
 EOF
 
-cat >~/bin/termux-url-opener <<EOF
-
 #!/data/data/com.termux/files/usr/bin/bash
 URL="\$1"
 

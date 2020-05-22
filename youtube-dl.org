@@ -69,7 +69,7 @@ Configure the default behavior of youtube-dl to download 1080p video when no oth
   EOF
 #+end_src
 
-#+begin_src sh -n +0 :tangle yes :tangle ./config.bash
+#+begin_src sh
 cat >~/bin/termux-url-opener <<EOF
 #+end_src
 
@@ -85,6 +85,7 @@ This is the old spotdl code. Should turn this into a funtion as well.
 Having way to much trouble with the functions and cases.
 
 #+begin_src sh
+  cat >~/bin/termux-url-opener <<EOF
   #!/data/data/com.termux/files/usr/bin/bash
   URL="\$1"
 
